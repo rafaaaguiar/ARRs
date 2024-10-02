@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Campo para o nome do cliente -->
+    <EditText
+        android:id="@+id/editTextCustomerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do cliente"
+        android:inputType="textPersonName" />
+
+    <!-- Escolher a data da reserva -->
+    <DatePicker
+        android:id="@+id/datePickerReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false" />
+
+    <!-- Escolher o horário da reserva -->
+    <TimePicker
+        android:id="@+id/timePickerReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner" />
+
+    <!-- Campo para o número de pessoas -->
+    <EditText
+        android:id="@+id/editTextNumberOfGuests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número de pessoas"
+        android:inputType="number" />
+
+    <!-- Botão para confirmar a reserva -->
+    <Button
+        android:id="@+id/btnConfirmReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Reserva" />
+</LinearLayout>
