@@ -43,7 +43,8 @@ public class RestaurantFragment extends Fragment {
 
         List<String> restaurantes = new ArrayList<>(Arrays.asList("Matsuya Aclimação",
                 "Pizzaria Tucuna", "Gran Itália","Le Bife","Zio Vitto Pizza e Pasta",
-                "Matriz Bar e Chopperia"));
+                "Matriz Bar e Chopperia","Reserva Rooftop","Toro Negro Steakhouse","Miró Gastronomia"
+                ,"Spot Restaurante","Seen - Restaurant & Bar","Terraço Itália","Imakay"));
 
         restaurantLocations = new HashMap<>();
         restaurantLocations.put("Matsuya Aclimação", new LatLng(-23.585644365854087, -46.62646959600341));
@@ -52,7 +53,14 @@ public class RestaurantFragment extends Fragment {
         restaurantLocations.put("Le Bife", new LatLng(-23.582133014564924, -46.68090433145299));
         restaurantLocations.put("Zio Vitto Pizza e Pasta", new LatLng(-23.58102031544115, -46.62524534425651));
         restaurantLocations.put("Matriz Bar e Chopperia", new LatLng(-23.57726247446499, -46.62884034765618));
-
+        restaurantLocations.put("Reserva Rooftop", new LatLng(-23.51859415977322, -46.68218013090856));
+        restaurantLocations.put("Toro Negro Steakhouse", new LatLng(-23.57726247446499, -46.62884034765618));
+        restaurantLocations.put("Miró Gastronomia", new LatLng(-23.56022901728999, -46.6701349));
+        restaurantLocations.put("Spot Restaurante", new LatLng(-23.59074990276226, -46.69000256213787));
+        /**----------------------Alterar coordenadas-------------------**/
+        restaurantLocations.put("Seen - Restaurant & Bar", new LatLng(-23.56385359727274, -46.65603506213876));
+        restaurantLocations.put("Terraço Itália", new LatLng(-23.57726247446499, -46.62884034765618));
+        restaurantLocations.put("Imakay", new LatLng(-23.57726247446499, -46.62884034765618));
 
 
         ListView listView = binding.listaRestaurantes;

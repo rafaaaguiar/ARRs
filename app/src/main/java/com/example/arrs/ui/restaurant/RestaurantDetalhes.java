@@ -60,7 +60,7 @@ public class RestaurantDetalhes extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());  // Permite carregar o conteúdo na WebView
         loadRestaurantDetails(webView, restaurantName); // Carregar o HTML de acordo com o restaurante
 
-        // Configurar o botão para abrir o Google Maps
+        // botão para abrir o Google Maps
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         Button btnViewOnMap = findViewById(R.id.btn_view_on_map);
 
@@ -76,7 +76,7 @@ public class RestaurantDetalhes extends AppCompatActivity {
             }
         });
 
-        // Configurar o botão para fazer uma reserva
+        // botão para fazer uma reserva
         Button btnMakeReservation = findViewById(R.id.btn_make_reservation);
         btnMakeReservation.setOnClickListener(v -> {
             Intent reservationIntent = new Intent(this, RestaurantReserva.class);
@@ -85,9 +85,9 @@ public class RestaurantDetalhes extends AppCompatActivity {
         });
     }
 
-    // Método para carregar o HTML de acordo com o restaurante selecionado
+    // carregar o HTML
     private void loadRestaurantDetails(WebView webView, String restaurantName) {
-        // Mapeamento do nome do restaurante para o arquivo HTML correspondente
+        // Mapeamento do nome do restaurante para o arquivo HTML
         String fileName = "";
         if (restaurantName.equals("La Brasa Stakehouse")) {
             fileName = "HTML/teste.html";
@@ -96,9 +96,9 @@ public class RestaurantDetalhes extends AppCompatActivity {
         } else if (restaurantName.equals("Gran Itália")) {
             fileName = "HTML/APS_DSW2.html";
         }
-        // Adicione mais mapeamentos de restaurante -> arquivo HTML conforme necessário
 
-        // Carregar o arquivo HTML da pasta assets
+
+        // Carregar o arquivo HTML
         if (!fileName.isEmpty()) {
             webView.loadUrl("file:///android_asset/restaurantes/" + fileName);
         }
