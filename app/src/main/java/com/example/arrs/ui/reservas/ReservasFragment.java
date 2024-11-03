@@ -36,7 +36,7 @@ public class ReservasFragment extends Fragment {
         recyclerView = root.findViewById(R.id.recyclerViewReservations);
         textViewNoReservations = root.findViewById(R.id.textViewNoReservations);
 
-        // Carregar os dados da reserva de SharedPreferences
+        //
         SharedPreferences sharedPreferences = requireContext().getSharedPreferences(RESERVATIONS_PREF,
                 getContext().MODE_PRIVATE);
 
@@ -51,13 +51,13 @@ public class ReservasFragment extends Fragment {
             reservations.add(reservationDetails);
         }**/
 
-        // Configurar o RecyclerView para exibir as reservas
+        // recyclerView para exibir as reservas
 
         reservationAdapter = new ReservationAdapter(reservations);
         recyclerView.setAdapter(reservationAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        // Mostrar ou ocultar a mensagem de "Nenhuma reserva"
+
         if (reservations.isEmpty()) {
             textViewNoReservations.setVisibility(View.VISIBLE);
             recyclerView.setVisibility(View.GONE);
