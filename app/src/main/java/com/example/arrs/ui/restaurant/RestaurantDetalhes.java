@@ -40,6 +40,21 @@ public class RestaurantDetalhes extends AppCompatActivity {
                 new LatLng(-23.58102031544115, -46.62524534425651));
         restaurantLocations.put("Matriz Bar e Chopperia",
                 new LatLng(-23.57726247446499, -46.62884034765618));
+        restaurantLocations.put("Reserva Rooftop",
+                new LatLng(-23.51859415977322, -46.68218013090856));
+        restaurantLocations.put("Toro Negro Steakhouse",
+                new LatLng(-23.57726247446499, -46.62884034765618));
+        restaurantLocations.put("Miró Gastronomia",
+                new LatLng(-23.56022901728999, -46.6701349));
+        restaurantLocations.put("Spot Restaurante",
+                new LatLng(-23.59074990276226, -46.69000256213787));
+        /**----------------------Alterar coordenadas-------------------**/
+        restaurantLocations.put("Seen - Restaurant & Bar",
+                new LatLng(-23.56385359727274, -46.65603506213876));
+        restaurantLocations.put("Terraço Itália",
+                new LatLng(-23.57726247446499, -46.62884034765618));
+        restaurantLocations.put("Imakay",
+                new LatLng(-23.57726247446499, -46.62884034765618));
 
 
 
@@ -94,7 +109,18 @@ public class RestaurantDetalhes extends AppCompatActivity {
         } else if (restaurantName.equals("Pizzaria Tucuna")) {
             fileName = "HTML/pizzaria_tucuna.html";
         } else if (restaurantName.equals("Gran Itália")) {
-            fileName = "HTML/APS_DSW2.html";
+            fileName = "HTML/gran_italia.html";
+        } else if (restaurantName.equals("Le Bife")) {
+            fileName = "HTML/le_bife.html";
+        } else if (restaurantName.equals("Zio Vitto Pizza e Pasta")) {
+            fileName = "HTML/zio_vitto.html";
+        } else if (restaurantName.equals("Matriz Bar e Chopperia")) {
+            fileName = "HTML/matriz.html";
+        } else if (restaurantName.equals("Matsuya Aclimação")) {
+            fileName = "HTML/matsuya_aclimacao.html";
+        } else if (restaurantName.equals("Reserva Rooftop")) {
+            fileName = "HTML/reserva.html";
+
         }
 
 
