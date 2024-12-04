@@ -22,14 +22,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Verifica se o usuário já está logado
+
         SharedPreferences preferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         boolean loggedIn = preferences.getBoolean("loggedIn", false);
 
         if (loggedIn) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
-            finish(); // Fecha a tela de login
+            finish();
         }
 
 
@@ -46,10 +46,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
             if (email.equals("admin@admin.com") && senha.equals("1234")) {
-                // Login bem-sucedido, vai para a MainActivity
+                // vai para a MainActivity
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Fecha a tela de login
+                finish(); //
             } else {
 
                 Toast.makeText(LoginActivity.this, "Email ou senha incorretos", Toast.LENGTH_SHORT).show();

@@ -51,7 +51,7 @@ public class ReservasFragment extends Fragment {
             reservations.add(reservationDetails);
         }**/
 
-        // recyclerView para exibir as reservas
+
 
         reservationAdapter = new ReservationAdapter(reservations);
         recyclerView.setAdapter(reservationAdapter);

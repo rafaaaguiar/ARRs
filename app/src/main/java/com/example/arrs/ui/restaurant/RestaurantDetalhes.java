@@ -57,7 +57,7 @@ public class RestaurantDetalhes extends AppCompatActivity {
 
 
 
-        // Receber os dados do restaurante via Intent
+
         Intent intent = getIntent();
         restaurantName = intent.getStringExtra("restaurant_name");
 
@@ -68,11 +68,11 @@ public class RestaurantDetalhes extends AppCompatActivity {
             return;
         }
 
-        // Exibir HTML local
+
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         WebView webView = findViewById(R.id.restaurant_details_webview);
-        webView.setWebViewClient(new WebViewClient());  // Permite carregar o conteúdo na WebView
-        loadRestaurantDetails(webView, restaurantName); // Carregar o HTML de acordo com o restaurante
+        webView.setWebViewClient(new WebViewClient());
+        loadRestaurantDetails(webView, restaurantName);
 
         // botão Google Maps
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
@@ -133,7 +133,7 @@ public class RestaurantDetalhes extends AppCompatActivity {
         }
 
 
-        // Carregar o arquivo HTML
+
         if (!fileName.isEmpty()) {
             webView.loadUrl("file:///android_asset/restaurantes/" + fileName);
         }

@@ -38,15 +38,20 @@ public class HomeFragment extends Fragment {
 
 package com.example.arrs.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.arrs.R;
+import com.example.arrs.ui.restaurant.RestaurantDetalhes;
+import com.example.arrs.ui.restaurant.RestaurantFragment;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.GoogleMap;
@@ -63,17 +68,24 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        // Inicializa o MapView
+
         mapView = root.findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
+
+        Button buttonRestaurantes = root.findViewById(R.id.button_restaurantes);
+        buttonRestaurantes.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), RestaurantFragment.class);
+            startActivity(intent);
+        });
+
 
         return root;
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        // Define uma localização fictícia (latitude e longitude do restaurante)
+
         LatLng restaurantLocation = new LatLng(-23.585644365854087, -46.62646959600341);
         googleMap.addMarker(new MarkerOptions().position(restaurantLocation).title("Matsuya Aclimação"));
         LatLng restaurantLocation2 = new LatLng(-23.500912684928668, -46.73355913023436);
@@ -104,7 +116,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurantLocation, 15)); // Zoom na localização
     }
 
-    // Ciclo de vida do MapView
+
     @Override
     public void onResume() {
         super.onResume();

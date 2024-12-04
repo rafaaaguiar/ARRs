@@ -23,7 +23,6 @@
         android:orientation="vertical"
         android:layout_gravity="center">
 
-        <!-- Campo de texto para o email -->
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="match_parent"
@@ -32,7 +31,6 @@
             android:inputType="textEmailAddress"
             />
 
-        <!-- Campo de texto para a senha -->
         <EditText
             android:id="@+id/inputSenha"
             android:layout_width="match_parent"
@@ -41,26 +39,22 @@
             android:inputType="textPassword" />
     </LinearLayout>
 
-    <!-- Espaço entre campos e botões -->
     <Space
         android:layout_width="match_parent"
         android:layout_height="100dp" />
 
-    <!-- Seção dos botões -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center">
 
-        <!-- Botão de login -->
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login" />
 
-        <!-- Botão de cadastro -->
     </LinearLayout>
 
     <Button

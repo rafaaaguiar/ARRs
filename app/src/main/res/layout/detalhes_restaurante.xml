@@ -7,9 +7,8 @@
     android:background="@color/transparent"
     tools:context=".ui.restaurant.RestaurantDetalhes">
 
-    <!-- WebView para exibir os detalhes do restaurante em HTML -->
 
-    <!-- Botão para abrir o Google Maps -->
+
   <!--  <Button
         android:id="@+id/btn_view_on_map"
         android:layout_width="wrap_content"

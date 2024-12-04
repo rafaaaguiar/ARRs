@@ -46,6 +46,7 @@ public class RestaurantReserva extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reserva_restaurante);
 
+        String restaurantName = getIntent().getStringExtra("restaurant_name");
 
         Locale locale = new Locale("pt", "BR");
         Locale.setDefault(locale);
@@ -76,7 +77,7 @@ public class RestaurantReserva extends AppCompatActivity {
                 String confirmationMessage = "Reserva confirmada para " + customerName +
                         " no dia " + day + "/" + month + "/" + year +
                         " às " + hour + ":" + String.format("%02d", minute) +
-                        " para " + numberOfGuests + " pessoas no restaurante.";
+                        " para " + numberOfGuests + " pessoas no restaurante " + restaurantName + ".";
                 Toast.makeText(RestaurantReserva.this, confirmationMessage, Toast.LENGTH_LONG).show();
 
                 saveReservation(confirmationMessage);
