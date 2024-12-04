@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Verificar se o usuário já está logado
+        // Verifica se o usuário já está logado
         SharedPreferences preferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         boolean loggedIn = preferences.getBoolean("loggedIn", false);
 

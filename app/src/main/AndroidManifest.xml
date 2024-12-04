@@ -15,7 +15,10 @@
         android:theme="@style/Theme.ARRs"
         tools:targetApi="31">
 
-        <!-- Tela de Login será a primeira a aparecer -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBtkENsVGfpOXt5sRNAcZpiFBwVGP-B9WI" />
+
         <activity
             android:name=".ui.LoginActivity"
             android:exported="true"
@@ -30,14 +33,12 @@
         <activity android:name=".ui.CadastroActivity" />
 
 
-        <!-- MainActivity (tela principal, mas não a inicial) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ARRs.NoActionBar" />
 
-        <!-- Outras Activities -->
         <activity android:name=".ui.restaurant.RestaurantDetalhes" />
         <activity android:name=".ui.restaurant.RestaurantReserva" />
 
