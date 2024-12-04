@@ -32,32 +32,32 @@ public class LoginActivity extends AppCompatActivity {
             finish(); // Fecha a tela de login
         }
 
-        // Vinculando os componentes do layout
+
         inputEmail = findViewById(R.id.inputEmail);
         inputSenha = findViewById(R.id.inputSenha);
         btnLogin = findViewById(R.id.btnLogin);
         btnCadastro = findViewById(R.id.btnCadastro);
 
 
-        // Evento do botão de login
+        //botão de login
         btnLogin.setOnClickListener(v -> {
             String email = inputEmail.getText().toString();
             String senha = inputSenha.getText().toString();
 
-            // Validação simples (você pode usar uma autenticação mais robusta, como Firebase)
+
             if (email.equals("admin@admin.com") && senha.equals("1234")) {
                 // Login bem-sucedido, vai para a MainActivity
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish(); // Fecha a tela de login
             } else {
-                // Exibe uma mensagem de erro
+
                 Toast.makeText(LoginActivity.this, "Email ou senha incorretos", Toast.LENGTH_SHORT).show();
             }
         });
-        // Evento do botão de cadastro
+
         btnCadastro.setOnClickListener(v -> {
-            // Navega para a tela de cadastro
+
             Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
             startActivity(intent);
         });

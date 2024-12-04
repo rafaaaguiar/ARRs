@@ -46,6 +46,8 @@ public class RestaurantFragment extends Fragment {
                 "Matriz Bar e Chopperia","Reserva Rooftop","Toro Negro Steakhouse","Miró Gastronomia"
                 ,"Spot Restaurante","Seen - Restaurant & Bar","Terraço Itália","Imakay"));
 
+
+
         restaurantLocations = new HashMap<>();
         restaurantLocations.put("Matsuya Aclimação", new LatLng(-23.585644365854087, -46.62646959600341));
         restaurantLocations.put("Pizzaria Tucuna", new LatLng(-23.500912684928668, -46.73355913023436));
@@ -57,7 +59,6 @@ public class RestaurantFragment extends Fragment {
         restaurantLocations.put("Toro Negro Steakhouse", new LatLng(-23.57726247446499, -46.62884034765618));
         restaurantLocations.put("Miró Gastronomia", new LatLng(-23.56022901728999, -46.6701349));
         restaurantLocations.put("Spot Restaurante", new LatLng(-23.59074990276226, -46.69000256213787));
-        /**----------------------Alterar coordenadas-------------------**/
         restaurantLocations.put("Seen - Restaurant & Bar", new LatLng(-23.56385359727274, -46.65603506213876));
         restaurantLocations.put("Terraço Itália", new LatLng(-23.57726247446499, -46.62884034765618));
         restaurantLocations.put("Imakay", new LatLng(-23.57726247446499, -46.62884034765618));
