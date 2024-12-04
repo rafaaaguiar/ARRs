@@ -48,13 +48,12 @@ public class RestaurantDetalhes extends AppCompatActivity {
                 new LatLng(-23.56022901728999, -46.6701349));
         restaurantLocations.put("Spot Restaurante",
                 new LatLng(-23.59074990276226, -46.69000256213787));
-        /**----------------------Alterar coordenadas-------------------**/
         restaurantLocations.put("Seen - Restaurant & Bar",
-                new LatLng(-23.56385359727274, -46.65603506213876));
+                new LatLng(-23.563819363026266, -46.656031619810165));
         restaurantLocations.put("Terraço Itália",
-                new LatLng(-23.57726247446499, -46.62884034765618));
+                new LatLng(-23.545325466957323, -46.64368526029008));
         restaurantLocations.put("Imakay",
-                new LatLng(-23.57726247446499, -46.62884034765618));
+                new LatLng(-23.586297058351676, -46.67640206213805));
 
 
 
@@ -69,13 +68,13 @@ public class RestaurantDetalhes extends AppCompatActivity {
             return;
         }
 
-        // Exibir o HTML local do restaurante
+        // Exibir HTML local
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         WebView webView = findViewById(R.id.restaurant_details_webview);
         webView.setWebViewClient(new WebViewClient());  // Permite carregar o conteúdo na WebView
         loadRestaurantDetails(webView, restaurantName); // Carregar o HTML de acordo com o restaurante
 
-        // botão para abrir o Google Maps
+        // botão Google Maps
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         Button btnViewOnMap = findViewById(R.id.btn_view_on_map);
 
@@ -104,8 +103,8 @@ public class RestaurantDetalhes extends AppCompatActivity {
     private void loadRestaurantDetails(WebView webView, String restaurantName) {
         // Mapeamento do nome do restaurante para o arquivo HTML
         String fileName = "";
-        if (restaurantName.equals("La Brasa Stakehouse")) {
-            fileName = "HTML/teste.html";
+        if (restaurantName.equals("Spot Restaurante")) {
+            fileName = "HTML/spot.html";
         } else if (restaurantName.equals("Pizzaria Tucuna")) {
             fileName = "HTML/pizzaria_tucuna.html";
         } else if (restaurantName.equals("Gran Itália")) {
@@ -115,12 +114,22 @@ public class RestaurantDetalhes extends AppCompatActivity {
         } else if (restaurantName.equals("Zio Vitto Pizza e Pasta")) {
             fileName = "HTML/zio_vitto.html";
         } else if (restaurantName.equals("Matriz Bar e Chopperia")) {
-            fileName = "HTML/matriz.html";
+            fileName = "HTML/matriz_bar.html";
         } else if (restaurantName.equals("Matsuya Aclimação")) {
             fileName = "HTML/matsuya_aclimacao.html";
         } else if (restaurantName.equals("Reserva Rooftop")) {
-            fileName = "HTML/reserva.html";
-
+            fileName = "HTML/reserva_rooftop.html";
+        } else if (restaurantName.equals("Toro Negro Steakhouse")) {
+            fileName = "HTML/toro_negro.html";
+        } else if (restaurantName.equals("Miró Gastronomia")) {
+            fileName = "HTML/miro_gastronomia.html";
+        } else if (restaurantName.equals("Seen - Restaurant & Bar")) {
+            fileName = "HTML/seen_restaurante.html";
+        } else if (restaurantName.equals("Terraço Itália")) {
+            fileName = "HTML/terraco_italia.html";
+        } else if (restaurantName.equals("Imakay")) {
+            fileName = "HTML/imakay.html";
+            
         }
 
 
